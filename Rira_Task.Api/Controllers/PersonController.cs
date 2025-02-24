@@ -23,7 +23,7 @@ namespace Rira_Task.Api.Controllers
 
         // GET api/<FoodController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<PersonListDto>> Get(int id)
+        public async Task<ActionResult<PersonDto>> Get(int id)
         {
             return Ok(await _mediator.Send(new GetPersonRequest { ID = id }));
         }

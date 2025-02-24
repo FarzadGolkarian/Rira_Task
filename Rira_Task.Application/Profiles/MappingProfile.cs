@@ -8,7 +8,6 @@ namespace Rira_Task.Application.Profiles
     {
         public MappingProfile()
         {
-            
 
             #region Personnel
 

@@ -1,3 +1,56 @@
 syntax = "proto3";
 
 option csharp_namespace = "Rira_Task.Grpc.Protos";
+
+
+package person;
+
+service PersonProtoService {
+
+  rpc  GetPerson(PersonRequest) returns (ProtoPersonDto);
+  rpc  CreatePerson(CreatePersonCommand) returns (Response);
+  rpc  UpdatePerson(UpdatePersonCommand) returns (Response);
+  rpc  DeletePerson(DeletePersonCommand) returns (Response);
+
+}
+
+
+message PersonRequest {
+  int32 ID = 1;
+}
+message ProtoPersonDto {
+ string Name =2 ;
+ string FullName = 3 ;
+ string NationalCode = 4 ;
+ string PersianDate = 5 ;
+
+}
+
+message CreatePerson {
+ string Name =2 ;
+ string FullName = 3 ;
+ string NationalCode = 4 ;
+ string PersianDate = 5 ;
+}
+message CreatePersonCommand {
+	CreatePerson CreatePersonDto = 1;
+}
+message Response {
+int32 ID =1;
+string Message =2;
+int32 Status =3;
+bool Success =4;
+repeated StringList list =5;
+}
+
+message UpdatePersonCommand {
+	int32 ID = 1;
+  ProtoPersonDto UpdatePersonDto = 2;
+}
+
+message DeletePersonCommand {
+   int32 ID = 1;;
+}
+message StringList {
+   string string = 1;
+}
