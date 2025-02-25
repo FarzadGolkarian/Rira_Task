@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Rira_Task.Application.Contracts.Persistence;
-using Rira_Task.Application.DTOs.Person;
 using Rira_Task.Domain;
 
 namespace Rira_Task.Persistence.Repositories
@@ -14,10 +13,11 @@ namespace Rira_Task.Persistence.Repositories
         }
 
 
-        public async Task<List<PersonDto>> GetPersonList()
+        public async Task<List<Person>> GetPersonList()
         {
 
-            return await _dbContext.Set<PersonDto>() .ToListAsync();
+            return await _dbContext.Set<Person>().ToListAsync();
+            
 
         }
 

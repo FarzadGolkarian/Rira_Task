@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Rira_Task.Application.Contracts.Persistence;
-using Rira_Task.Application.DTOs.FoodProgram.Validators;
+using Rira_Task.Application.DTOs.Person.Validators;
 using Rira_Task.Application.Features.Person.Requests.Commands;
 
 namespace Rira_Task.Application.Features.Person.Handlers.Commands

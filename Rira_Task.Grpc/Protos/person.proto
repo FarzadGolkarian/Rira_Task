@@ -8,6 +8,7 @@ package person;
 service PersonProtoService {
 
   rpc  GetPerson(PersonRequest) returns (ProtoPersonDto);
+  rpc  GetListPerson(PersonListRequest) returns (ProtoPersonListDto);
   rpc  CreatePerson(CreatePersonCommand) returns (Response);
   rpc  UpdatePerson(UpdatePersonCommand) returns (Response);
   rpc  DeletePerson(DeletePersonCommand) returns (Response);
@@ -23,6 +24,15 @@ message ProtoPersonDto {
  string FullName = 3 ;
  string NationalCode = 4 ;
  string PersianDate = 5 ;
+
+}
+
+message PersonListRequest {
+}
+
+message ProtoPersonListDto {
+
+repeated ProtoPersonDto ProtoPersonDto = 1;
 
 }
 

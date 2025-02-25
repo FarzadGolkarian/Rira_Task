@@ -6,8 +6,11 @@ using Rira_Task.Application.Features.Person.Requests.Queries;
 
 namespace Rira_Task.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class PersonController : Controller
     {
+
         private readonly IMediator _mediator;
         public PersonController(IMediator mediator)
         {
@@ -16,7 +19,7 @@ namespace Rira_Task.Api.Controllers
 
         // GET: api/<FoodController>
         [HttpGet]
-        public async Task<ActionResult<List<PersonListDto>>> Get()
+        public async Task<ActionResult<List<PersonListDto>>> GetAll()
         {
             return Ok(await _mediator.Send(new GetPersonListRequest()));
         }

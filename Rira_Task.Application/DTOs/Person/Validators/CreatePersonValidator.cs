@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
-using Rira_Task.Application.DTOs.Person;
 
-namespace Rira_Task.Application.DTOs.FoodProgram.Validators
+namespace Rira_Task.Application.DTOs.Person.Validators
 {
     public class CreatePersonValidator : AbstractValidator<CreatePersonDto>
     {

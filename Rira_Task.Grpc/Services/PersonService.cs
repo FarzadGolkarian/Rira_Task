@@ -30,6 +30,14 @@ namespace Rira_Task.Grpc.Services
 
         }
 
+        public override async Task<ProtoPersonListDto> GetListPerson(PersonListRequest request, ServerCallContext context)
+        {
+            _logger.LogInformation("GetListPerson");
+
+            return _mapper.Map<ProtoPersonListDto>(await _mediator.Send(new GetPersonListRequest ()));
+        }
+
+
         public override async Task<Response> CreatePerson(CreatePersonCommand request, ServerCallContext context)
         {
             _logger.LogInformation("CreatePerson");

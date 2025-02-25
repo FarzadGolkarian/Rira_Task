@@ -13,6 +13,7 @@ namespace Rira_Task.Grpc.Mapper.Profiles
             #region PersonnelProto
 
             CreateMap<ProtoPersonDto, PersonDto>().ReverseMap();
+            CreateMap<ProtoPersonListDto, PersonListDto>().ReverseMap();
             CreateMap<CreatePersonCommand, CreatePersonDto>().ReverseMap();
             CreateMap<Response, BaseCommandResponse>().ReverseMap();
 

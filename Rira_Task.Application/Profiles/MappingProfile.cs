@@ -14,7 +14,6 @@ namespace Rira_Task.Application.Profiles
             CreateMap<Person, PersonDto>().ReverseMap();
             CreateMap<Person, PersonListDto>().ReverseMap();
             CreateMap<Person, CreatePersonDto>().ReverseMap();
-            CreateMap<Person, PersonListDto>().ReverseMap();
             CreateMap<Person, UpdatePersonDto>().ReverseMap();
 
 
